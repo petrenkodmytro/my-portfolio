@@ -1,0 +1,172 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header__container {
+  @extend %list;
+}
+
+.navigation {
+  @extend %list;
+}
+
+.navigation__logo {
+  margin-right: 60px;
+  @include desktop {
+    margin-right: 130px;
+  }
+}
+
+.logo__icon {
+  fill: #ffffff;
+
+  @include tablet {
+    fill: var(--second-title-color);
+  }
+}
+
+.menu {
+  display: none;
+  gap: 30px;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.header__connect {
+  margin-left: auto;
+  display: none;
+
+  @include tablet {
+    display: flex;
+    gap: 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 40px;
+    margin-right: 20px;
+  }
+}
+
+.menu__link,
+.connect__tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--main-title-color);
+  transition: color 200ms linear;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+  &.current {
+    color: var(--accent-color);
+  }
+}
+
+.menu-open {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.icon_open {
+  fill: #ffffff;
+}
+
+.mob-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  > .container {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+  }
+}
+
+.menu-close {
+  margin-left: auto;
+  display: block;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.mob-menu-list {
+  margin-bottom: 32px;
+}
+
+.mob-menu-list__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mob-menu-list__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.mob-connect {
+  margin-bottom: 30px;
+}
+
+.mob-connect__tel {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+.mob-connect__btn {
+  display: block;
+  margin-top: 24px;
+}
+
+.mob-soc {
+  padding-left: 100px;
+  position: relative;
+}
+
+.mob-soc::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  top: 9px;
+}
+
+.mob-soc__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mob-soc__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  letter-spacing: 0.2em;
+  color: #303030;
+}
