@@ -19,43 +19,75 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
 
   <body class="site-body">
-
+    <!-- HEADER -->
     <header class="header">
-      <div class="container header__container">
-        <nav class="navigation">
-          <a href="" class="logo navigation__logo">
-            <svg class="logo__icon" width="69" height="55">
-              <use href="./img/icons.svg#icon-logo"></use>
-            </svg>
-          </a>
-          <ul class="menu list">
-            <li class="menu__item">
-              <a class="menu__link link current" href="#about">About</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link link" href="#prices">Services and prices</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link link" href="#barbers">Barbers</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link link" href="#contact">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="connect header__connect">
-          <a class="connect__tel link" href="tel:+380441111111"> +38 044 111 11 11</a>
-          <button class="connect__btn btn btn--color-light" type="button">Online-booking</button>
-        </div>
+      <div class="container">
         <button type="button" class="menu-open" data-menu-open>
           <svg class="icon_open" width="40" height="40">
             <use href="./img/icons.svg#icon-menu"></use>
           </svg>
         </button>
+        <!-- <div class="container header__container">
+          <nav class="navigation">
+            <a href="" class="logo navigation__logo">
+              <svg class="logo__icon" width="69" height="55">
+                <use href="./img/icons.svg#icon-logo"></use>
+              </svg>
+            </a>
+            <ul class="menu list">
+              <li class="menu__item">
+                <a class="menu__link link current" href="#about">About</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link" href="#prices">Services and prices</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link" href="#barbers">Barbers</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link" href="#contact">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="connect header__connect">
+            <a class="connect__tel link" href="tel:+380441111111"> +38 044 111 11 11</a>
+            <button class="connect__btn btn btn--color-light" type="button">Online-booking</button>
+          </div>
+          
+        </div> -->
+        <div class="d-flex flex-column">
+  
+          <div class="profile">
+            <img src="img/Dmytro2.jpg" alt="" class="img-fluid rounded-circle">
+            <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+            <div class="social-links mt-3 text-center">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+    
+          <nav id="navbar" class="nav-menu navbar">
+            <ul>
+              <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+              <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+              <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+              <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+              <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+              <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
+
       <div class="mob-menu is-hidden" data-menu>
         <div class="container">
           <div class="mob-menu-top">
@@ -115,6 +147,7 @@
             <div class="container">
               <p class="pre-title hero__pre-title">A hair salon for men in Kyiv</p>
               <h1 class="hero__title animate__animated animate__wobble">BarberShop</h1>
+              <i class="fab fa-facebook-f"></i>
               <p class="hero__after-title">We are experts in trendy men’s haircuts. We work quickly, carefully and with style.</p>
             </div>
           </div>

@@ -5,6 +5,14 @@
   padding-bottom: 32px;
 }
 
+.profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+  border-radius: 50%;
+}
+
 .header__container {
   @extend %list;
 }
@@ -86,8 +94,12 @@
   fill: #ffffff;
 }
 
+.mob-menu.is-hidden {
+  transform: translateX(-100%);
+}
+
 .mob-menu {
-  width: 100vw;
+  // width: 100vw;
   height: 100vh;
   background-color: #ffffff;
   top: 0;
@@ -95,6 +107,9 @@
   z-index: 1;
   padding-top: 48px;
   padding-bottom: 48px;
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 500ms ease;
   > .container {
     height: 90%;
     display: flex;
