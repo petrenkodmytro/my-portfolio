@@ -36,32 +36,29 @@
   }
 }
 
+.hero{
+  background-color: #3d3e45;
+}
+
 .hero__wrap {
   background-color: #3d3e45;
-  background-image: var(--gradient), url(../img/hero-bg-mob.jpeg);
+  background-image: var(--gradient), url(../img/myphoto-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // padding: 272px 100px 208px 100px;
-  padding: 208px 31px;
+  padding: 300px 10px 30px 10px;
   flex-grow: 1;
   @include retina {
-    background-image: var(--gradient), url(../img/hero-bg-mob-2x.jpeg);
+    background-image: var(--gradient), url(../img/myphoto-bg.jpg);
   }
   @include tablet {
-    padding: 272px 100px 237px 100px;
-    background-image: var(--gradient), url(../img/hero-bg-tab.jpeg);
+    padding: 470px 100px 20px 100px;
+    background-image: var(--gradient), url(../img/myphoto-bg.jpg);
     @include retina {
-      background-image: var(--gradient), url(../img/hero-bg-tab-2x.jpeg);
+      background-image: var(--gradient), url(../img/myphoto-bg.jpg);
     }
   }
-  @include desktop {
-    padding: 272px 100px 208px 100px;
-    background-image: var(--gradient), url(../img/hero-bg.jpeg);
-    @include retina {
-      background-image: var(--gradient), url(../img/hero-bg-2x.jpeg);
-    }
-  }
+ 
 }
 
 .soc__link {
@@ -78,7 +75,7 @@
 
 .hero__pre-title {
   color: rgba(157, 164, 189, 0.6);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .hero__title {
@@ -86,15 +83,15 @@
   font-weight: 700;
   // font-size: 72px;
   // line-height: calc(85 / 72);
-  font-size: 40px;
+  font-size: 30px;
   line-height: calc(56 / 48);
   letter-spacing: 0.05em;
   color: var(--main-title-color);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: baseline;
   @include mobile {
-    font-size: 48px;
+    font-size: 40px;
   }
   @include desktop {
     font-size: 72px;
@@ -124,13 +121,13 @@
 .hero__after-title {
   // font-size: 18px;
   // line-height: 1.67;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.62;
-  color: #9da4bd;
+  color: #f3f3f6;
   // max-width: 360px;
   max-width: 320px;
   @include tablet {
-    font-size: 18px;
+    font-size: 24px;
     line-height: 1.67;
     max-width: 360px;
   }

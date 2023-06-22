@@ -7,7 +7,7 @@
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  border: 1px solid #ff6c00;
+  border: 1px solid var(--accent-color);
   border-radius: 25px;
   background-color: transparent;
   transition: background-color 200ms linear, color 200ms linear;
