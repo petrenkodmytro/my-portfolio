@@ -1,19 +1,18 @@
 .header {
   position: fixed;
+  z-index: 10; // щоб перекривало main
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
- 
+
   @include tablet {
-    background-color: #d2cfcf;
+    background-color: black;
   }
 }
 
-
 .header__container {
   display: none;
-  // flex-direction: column;
- justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 10px;
   @include tablet {
@@ -21,13 +20,39 @@
   }
 }
 
-.navbar{
+.header__title{
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--accent-color);
+}
+
+.navbar {
   display: flex;
   gap: 10px;
 }
 
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #a8a9b4;
+  padding: 5px;
+  transition: all 1s ease;
+  font-size: 15px;
+  &:focus,
+  &:active, &:hover {
+    color: var(--main-title-color);
+  }
+  &>i{
+    transition: all 0.3s ease;
+  }
+  &:hover>i {
+    color: var(--accent-color);
+  }
+}
+
 .profile {
-  // margin: 15px auto;
   display: block;
   width: 100px;
   border: 4px solid #2c2f3f;
@@ -54,7 +79,7 @@
 // ---mobile menu---
 .menu-open {
   margin-left: auto;
-  background-color: rgba(0, 0, 0, 0.966);
+  background-color: var(--second-btn-color);
   border: none;
   border-radius: 5px;
 
@@ -74,10 +99,10 @@
 .mob-menu {
   // width: 100vw;
   height: 100vh;
-  background-color: #d2cfcf;
+  background-color: #d5dae1;
   top: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   padding-top: 32px;
   padding-bottom: 32px;
   transform: translateX(0);

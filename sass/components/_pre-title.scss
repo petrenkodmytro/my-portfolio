@@ -3,10 +3,11 @@
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+  color: var(--accent-color);
   @extend %list;
   gap: 20px;
   &::before {
-    content: '';
+    content: "";
     width: 60px;
     height: 1px;
     background-color: currentColor;

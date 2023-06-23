@@ -79,7 +79,6 @@
 }
 
 .benefits-pre-title {
-  color: #303030;
   margin-bottom: 20px;
 }
 
@@ -88,10 +87,7 @@
   margin-bottom: 20px;
   display: flex;
   align-items: flex-start;
-  &::before {
-    content: "?";
-    transform: rotate(-180deg);
-  }
+  
 }
 
 .benefits-after-title {
