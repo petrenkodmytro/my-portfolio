@@ -27,92 +27,111 @@
   <body class="site-body">
     <!-- HEADER -->
     <header class="header">
-      <div class="container">
-        <button type="button" class="menu-open" data-menu-open>
-          <svg class="icon_open" width="40" height="40">
-            <use href="./img/icons.svg#icon-menu"></use>
-          </svg>
-        </button>
-
-        <div class="header__container">
-          <a class="header__title link" href="./index.html">My Portfolio</a>
-          <nav id="navbar" class="nav-menu">
-            <ul class="navbar">
-              <li>
-                <a href="#hero" class="nav-link link  "><i class="bx bx-home"></i> <span>Home</span></a>
-              </li>
-              <li>
-                <a href="#about" class="nav-link link "><i class="bx bx-user"></i> <span>About</span></a>
-              </li>
-              <li>
-                <a href="#resume" class="nav-link link "><i class="bx bx-file-blank"></i> <span>Resume</span></a>
-              </li>
-              <li>
-                <a href="#portfolio" class="nav-link link "><i class="bx bx-book-content"></i> <span>Portfolio</span></a>
-              </li>
-              <li>
-                <a href="#contacts" class="nav-link link "><i class="bx bx-envelope"></i> <span>Contacts</span></a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <button type="button" class="menu-open" data-menu-open>
+        <svg class="icon_open" width="40" height="40">
+          <use href="./img/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
+      <div class="header__container container">
+        <a class="header__title link" href="./index.html">My Portfolio</a>
+        <nav id="navbar" class="nav-menu">
+          <ul class="navbar">
+            <li>
+              <a href="#hero" class="nav-link link"><i class="bx bx-home"></i> <span>Home</span></a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link link"><i class="bx bx-user"></i> <span>About</span></a>
+            </li>
+            <li>
+              <a href="#resume" class="nav-link link"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
+            </li>
+            <li>
+              <a href="#portfolio" class="nav-link link"><i class="bx bx-book-content"></i> <span>Portfolio</span></a>
+            </li>
+            <li>
+              <a href="#contacts" class="nav-link link"><i class="bx bx-envelope"></i> <span>Contacts</span></a>
+            </li>
+          </ul>
+        </nav>
       </div>
-
       <div class="mob-menu is-hidden" data-menu>
         <div class="container">
-          <div class="mob-menu-top">
-            <button type="button" class="menu-close" data-menu-close>
-              <svg class="icon_close" width="40" height="40">
-                <use href="./img/icons.svg#icon-menu-close"></use>
-              </svg>
-            </button>
-            <div class="d-flex flex-column">
-              <div>
-                <img src="img/Dmytro2.jpg" alt="" class="profile" />
-                <p class="text-light">Dmytro Petrenko</p>
-                <ul class="contact list">
-                  <li class="contact__item">
-                    <a class="contact__link link" href="mailto:ipetrenko_dmytro@ukr.net" lang="en">
-                      <svg class="contact__icon" width="20" height="20">
-                        <use href="./img/icons.svg#icon-mail"></use>
-                      </svg>
-                      petrenko_dmytro@ukr.net
-                    </a>
-                  </li>
-                  <li class="contact__item">
-                    <a class="contact__link link" href="tel:+380994675846">
-                      <svg class="contact__icon" width="20" height="20">
-                        <use href="./img/icons.svg#icon-smartphone"></use>
-                      </svg>
-                      +38 099-46-75-846</a
-                    >
-                  </li>
-                </ul>
-                <div class="social-links mt-3 text-center">
-                  <a href="https://t.me/petrenko_dimych" class="telegram"><i class="bx bxl-telegram"></i></a>
-                  <a href="https://github.com/petrenkodmytro" class="github"><i class="bx bxl-github"></i></a>
-                  <a href="https://www.linkedin.com/in/dmytro-petrenko-link/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                  <a href="https://www.facebook.com/dima.petrenko.ukrdazt" class="facebook"><i class="bx bxl-facebook"></i></a>
-                </div>
-              </div>
-              <ul class="mob-menu-list list">
-                <li class="mob-menu-list__item">
-                  <a class="mob-menu-list__link link current" href="hero"><i class="bx bx-home"></i>Home</a>
+          <button type="button" class="menu-close" data-menu-close>
+            <svg class="icon_close" width="40" height="40">
+              <use href="./img/icons.svg#icon-menu-close"></use>
+            </svg>
+          </button>
+          <div class="sidebar">
+            <div>
+              <img src="img/Dmytro2.jpg" alt="" class="sidebar__profile" />
+              <p class="sidebar__text-title">Dmytro Petrenko</p>
+              <ul class="contact list">
+                <li class="contact__item">
+                  <a class="contact__link link" href="mailto:ipetrenko_dmytro@ukr.net" lang="en">
+                    <svg class="contact__icon" width="20" height="20">
+                      <use href="./img/icons.svg#icon-mail"></use>
+                    </svg>
+                    petrenko_dmytro@ukr.net
+                  </a>
                 </li>
-                <li class="mob-menu-list__item">
-                  <a class="mob-menu-list__link link " href="#about"><i class="bx bx-user"></i>About</a>
+                <li class="contact__item">
+                  <a class="contact__link link" href="tel:+380994675846">
+                    <svg class="contact__icon" width="20" height="20">
+                      <use href="./img/icons.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 099-46-75-846</a
+                  >
                 </li>
-                <li class="mob-menu-list__item">
-                  <a class="mob-menu-list__link link" href="#resume"><i class="bx bx-file-blank"></i>Resume</a>
+              </ul>
+             
+              <ul class="soc-list list">
+                <li class="soc-item">
+                  <a href="https://github.com/petrenkodmytro" class="soc-link link" aria-label="github">
+                    <svg class="soc-icon" width="20" height="20">
+                      <use href="./img/icons.svg#github"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="mob-menu-list__item">
-                  <a class="mob-menu-list__link link" href="#portfolio"><i class="bx bx-book-content"></i>Portfolio</a>
+                <li class="soc-item">
+                  <a href="https://t.me/petrenko_dimych" class="soc-link link" aria-label="telegram">
+                    <svg class="soc-icon" width="20" height="20">
+                      <use href="./img/icons.svg#icon-send"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="mob-menu-list__item">
-                  <a class="mob-menu-list__link link" href="#contacts"><i class="bx bx-envelope"></i>Contacts</a>
+                <li class="soc-item">
+                  <a href="https://www.linkedin.com/in/dmytro-petrenko-link/" class="soc-link link" aria-label="linkedin">
+                    <svg class="soc-icon" width="20" height="20">
+                      <use href="./img/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="soc-item">
+                  <a href="https://www.facebook.com/dima.petrenko.ukrdazt" class="soc-link link" aria-label="facebook">
+                    <svg class="soc-icon" width="20" height="20">
+                      <use href="./img/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>
+            <ul class="mob-menu-list list">
+              <li class="mob-menu-list__item">
+                <a class="mob-menu-list__link link current" href="hero"><i class="bx bx-home"></i>Home</a>
+              </li>
+              <li class="mob-menu-list__item">
+                <a class="mob-menu-list__link link" href="#about"><i class="bx bx-user"></i>About</a>
+              </li>
+              <li class="mob-menu-list__item">
+                <a class="mob-menu-list__link link" href="#resume"><i class="bx bx-file-blank"></i>Resume</a>
+              </li>
+              <li class="mob-menu-list__item">
+                <a class="mob-menu-list__link link" href="#portfolio"><i class="bx bx-book-content"></i>Portfolio</a>
+              </li>
+              <li class="mob-menu-list__item">
+                <a class="mob-menu-list__link link" href="#contacts"><i class="bx bx-envelope"></i>Contacts</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -134,35 +153,19 @@
       <!-- about -->
       <section class="about section" id="about">
         <div class="container about__container">
-          <ul class="pic-list list">
-            <li class="pic-list__item">
-              <picture>
-                <source srcset="./img/abot-img-desktop-1.jpeg 1x, ./img/abot-img-desktop-1.jpeg 2x" media="(min-width: 1200px)" />
-                <source srcset="./img/abot-img-tablet-1.jpg 1x, ./img/abot-img-tablet-1.jpg 2x" media="(min-width: 768px)" />
-                <img src="./img/abot-img-tablet-1.jpg" alt="haircut" width="330" />
-              </picture>
-            </li>
-            <li class="pic-list__item">
-              <picture>
-                <source srcset="./img/abot-img-desktop-2.jpeg 1x, ./img/abot-img-desktop-2.jpeg 2x" media="(min-width: 1200px)" />
-                <source srcset="./img/abot-img-tablet-2.jpg 1x, ./img/abot-img-tablet-2.jpg 2x" media="(min-width: 768px)" />
-                <img src="./img/abot-img-tablet-2.jpg" alt="haircut" width="330" />
-              </picture>
-            </li>
-          </ul>
           <div class="about__wrap">
             <p class="pre-title about__pre-title">About</p>
-            <h2 class="section-title about__title " data-aos="fade-left">About</h2>
-            <p class="about__after-title">If you want to add more confidence to your image, you should definitely visit us.</p>
+            <h2 class="section-title about__title" data-aos="fade-left">About</h2>
+            <p class="about__after-title">To get the desired result, you need to put a lot of effort.</p>
             <p class="about__text">
-              We are a team that never stops at what has been achieved and are thirsty for changes. And when you fall into the hands of our master, you will never be the same again. We are a team that
-              is always "on the same wave" with clients. Therefore, we are always ready to improve everyone who comes to us!
+              I am a Junior Fullstack Developer. I am studying at the Full Stack Developer course at the Go IT company. During the period of training I created two team and five individual projects. I
+              have practical experience in creating websites. Mastered the skills HTML, CSS, SCSS, JavaScript, React.js. Continuing to study Node.js.
             </p>
           </div>
         </div>
       </section>
       <!-- prices -->
-      <section class="prices section" id="resume">
+      <!-- <section class="prices section" id="resume">
         <div class="container">
           <p class="prices-pre-title pre-title">Resume</p>
           <h2 class="prices-title section-title " data-aos="fade-left">Resume</h2>
@@ -205,9 +208,9 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- benefits -->
-      <section class="benefits section" id="portfolio">
+      <!-- <section class="benefits section" id="portfolio">
         <div class="container benefits-container">
           <div class="benefits-wrap">
             <p class="benefits-pre-title pre-title">Old traditional school</p>
@@ -215,9 +218,9 @@
             <p class="benefits-after-title">Only good things are said about us. But it's better to see and feel 1 time than read 10 times.</p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- barbers -->
-      <section class="barbers section" id="hobby">
+      <!-- <section class="barbers section" id="hobby">
         <div class="container">
           <p class="barbers-pre-title pre-title">For true enjoyers of the atmosphere</p>
           <h2 class="barbers-title section-title" data-aos="fade-left">Hobby</h2>
@@ -266,51 +269,10 @@
             </li>
           </ul>
         </div>
-      </section>
-      <!-- gallery -->
-      <!-- <section class="gallery section">
-        <div class="container">
-          <p class="gallery-pre-title pre-title">In Latin, "barba" means "beard"</p>
-          <h2 class="visually-hidden">Gallery</h2>
-          <ul class="gallery-list list">
-            <li class="gallery-item">
-              <picture>
-                <source srcset="./img/gallery/gallery-img-1-desk-min.jpg 1x, ./img/gallery/gallery-img-1-desk-2x-min.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./img/gallery/gallery-img-1-tab-min.jpg 1x, ./img/gallery/gallery-img-1-tab-2x-min.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./img/gallery/gallery-img-1-mob-min.jpg 1x, ./img/gallery/gallery-img-1-mob-2x-min.jpg 2x" media="(min-width: 320px)" />
-                <img src="./img/gallery/gallery-img-1-mob-min.jpg" alt="haircut" width="418" />
-              </picture>
-            </li>
-            <li class="gallery-item">
-              <picture>
-                <source srcset="./img/gallery/gallery-img-2-desk-min.jpg 1x, ./img/gallery/gallery-img-2-desk-2x-min.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./img/gallery/gallery-img-2-tab-min.jpg 1x, ./img/gallery/gallery-img-2-tab-2x-min.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./img/gallery/gallery-img-2-mob-min.jpg 1x, ./img/gallery/gallery-img-2-mob-2x-min.jpg 2x" media="(min-width: 320px)" />
-                <img src="./img/gallery/gallery-img-2-mob-min.jpg" alt="haircut" width="418" />
-              </picture>
-            </li>
-            <li class="gallery-item">
-              <picture>
-                <source srcset="./img/gallery/gallery-img-3-desk-min.jpg 1x, ./img/gallery/gallery-img-3-desk-2x-min.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./img/gallery/gallery-img-3-tab-min.jpg 1x, ./img/gallery/gallery-img-3-tab-2x-min.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./img/gallery/gallery-img-3-mob-min.jpg 1x, ./img/gallery/gallery-img-3-mob-2x-min.jpg 2x" media="(min-width: 320px)" />
-                <img src="./img/gallery/gallery-img-3-mob-min.jpg" alt="haircut" width="418" />
-              </picture>
-            </li>
-            <li class="gallery-item">
-              <picture>
-                <source srcset="./img/gallery/gallery-img-4-desk-min.jpg 1x, ./img/gallery/gallery-img-4-desk-2x-min.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./img/gallery/gallery-img-4-tab-min.jpg 1x, ./img/gallery/gallery-img-4-tab-2x-min.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./img/gallery/gallery-img-4-mob-min.jpg 1x, ./img/gallery/gallery-img-4-mob-2x-min.jpg 2x" media="(min-width: 320px)" />
-                <img src="./img/gallery/gallery-img-4-mob-min.jpg" alt="haircut" width="418" />
-              </picture>
-            </li>
-          </ul>
-        </div>
-      </section> -->
+      </section>    -->
       <!-- contacts -->
-      <div class="contact-wrap" id="contact">
-        <section class="online section">
+      <!-- <div class="contact-wrap" >
+        <section class="online section" id="contact">
           <div class="container">
             <h2 class="online-title section-title">Send message</h2>
             <form class="online-form">
@@ -342,7 +304,7 @@
             <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
           </div>
         </section>
-      </div>
+      </div> -->
     </main>
 
     <footer class="footer">

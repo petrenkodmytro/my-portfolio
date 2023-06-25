@@ -1,10 +1,11 @@
 .header {
-  position: fixed;
+  position: sticky;
+  top: 0px;
+  left: 0px;
   z-index: 10; // щоб перекривало main
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
+  // width: 100%;
+  // padding-top: 10px;
+  // padding-bottom: 10px;
   @include tablet {
     background-color: black;
   }
@@ -15,12 +16,13 @@
   justify-content: space-around;
   align-items: center;
   gap: 10px;
+  // width: 100%;
   @include tablet {
     display: flex;
   }
 }
 
-.header__title{
+.header__title {
   font-weight: bold;
   font-size: 20px;
   font-style: italic;
@@ -38,25 +40,19 @@
   gap: 3px;
   color: #a8a9b4;
   padding: 5px;
-  transition: all 1s ease;
+  transition: color var(--transition-duration) var(--transition-timing-function);
   font-size: 15px;
   &:focus,
-  &:active, &:hover {
+  &:active,
+  &:hover {
     color: var(--main-title-color);
   }
-  &>i{
-    transition: all 0.3s ease;
+  & > i {
+    transition: color var(--transition-duration) var(--transition-timing-function);
   }
-  &:hover>i {
+  &:hover > i {
     color: var(--accent-color);
   }
-}
-
-.profile {
-  display: block;
-  width: 100px;
-  border: 4px solid #2c2f3f;
-  border-radius: 50%;
 }
 
 .menu__link,
@@ -66,7 +62,7 @@
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: var(--main-title-color);
-  transition: color 200ms linear;
+  transition: color var(--transition-duration) var(--transition-timing-function);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -78,10 +74,16 @@
 
 // ---mobile menu---
 .menu-open {
-  margin-left: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  // margin-left: auto;
   background-color: var(--second-btn-color);
   border: none;
   border-radius: 5px;
+  &:hover .icon_open {
+    fill: var(--accent-color);
+  }
 
   @include tablet {
     display: none;
@@ -89,6 +91,7 @@
 }
 
 .icon_open {
+  transition: color var(--transition-duration) var(--transition-timing-function);
   fill: var(--main-title-color);
 }
 
@@ -103,13 +106,13 @@
   top: 0;
   position: fixed;
   z-index: 999;
-  padding-top: 32px;
+  padding-top: 20px;
   padding-bottom: 32px;
   transform: translateX(0);
   opacity: 1;
   transition: all 500ms ease;
-  > .container {
-    height: 90%;
+  & > .container {
+    // height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -122,12 +125,100 @@
   display: block;
   background-color: transparent;
   border: none;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
+  &:hover .icon_close {
+    fill: var(--accent-color);
+  }
 }
 
-.mob-menu-list {
-  margin-bottom: 32px;
+.icon_close {
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  fill: var(--second-title-color);
 }
+
+.sidebar__profile {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  border: 8px solid var(--second-title-color);
+  border-radius: 50%;
+}
+
+.sidebar__text-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align-last: center;
+}
+
+.contact__item{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.contact__link {
+
+  font-weight: 500;
+  line-height: 1.14;
+  // letter-spacing: 0.02em;
+  color: var(--brand-color);
+
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+.contact__link:hover,
+.contact__link:focus {
+  color: var(--accent-color);
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  color: var(--second-title-color);
+}
+
+.contact__icon {
+  display: block;
+  margin-right: 10px;
+  fill: currentColor;
+
+  .contact__link:hover &,
+  .contact__link:focus & {
+    fill: currentColor;
+  }
+}
+
+.soc-list {
+  display: flex;
+  // justify-content: start;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.soc-link {
+  width: 100%;
+  height: 100%;
+  background: var(--main-btn-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--second-title-color);
+  transition: background-color var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--second-title-color);
+    fill: var(--accent-color);
+  }
+}
+
 
 .mob-menu-list__item:not(:last-child) {
   margin-bottom: 10px;
