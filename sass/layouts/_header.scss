@@ -3,9 +3,6 @@
   top: 0px;
   left: 0px;
   z-index: 10; // щоб перекривало main
-  // width: 100%;
-  // padding-top: 10px;
-  // padding-bottom: 10px;
   @include tablet {
     background-color: black;
   }
@@ -31,15 +28,16 @@
 
 .navbar {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
   color: #a8a9b4;
-  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: color var(--transition-duration) var(--transition-timing-function);
   font-size: 15px;
   &:focus,
@@ -77,14 +75,12 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  // margin-left: auto;
   background-color: var(--second-btn-color);
   border: none;
   border-radius: 5px;
   &:hover .icon_open {
     fill: var(--accent-color);
   }
-
   @include tablet {
     display: none;
   }
@@ -112,7 +108,6 @@
   opacity: 1;
   transition: all 500ms ease;
   & > .container {
-    // height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -125,7 +120,6 @@
   display: block;
   background-color: transparent;
   border: none;
-  // margin-bottom: 10px;
   &:hover .icon_close {
     fill: var(--accent-color);
   }
@@ -152,18 +146,15 @@
   text-align-last: center;
 }
 
-.contact__item{
+.contact__item {
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
 .contact__link {
-
   font-weight: 500;
   line-height: 1.14;
-  // letter-spacing: 0.02em;
   color: var(--brand-color);
-
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
@@ -191,7 +182,6 @@
 
 .soc-list {
   display: flex;
-  // justify-content: start;
   gap: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -219,7 +209,6 @@
   }
 }
 
-
 .mob-menu-list__item:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -230,47 +219,16 @@
   line-height: calc(25 / 18);
   letter-spacing: 0.1em;
   color: #303030;
-}
-
-.mob-connect {
-  margin-bottom: 00px;
-}
-
-.mob-connect__tel {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: calc(25 / 18);
-  letter-spacing: 0.1em;
-  color: #303030;
-}
-.mob-connect__btn {
-  display: block;
-  margin-top: 24px;
-}
-
-.mob-soc {
-  padding-left: 100px;
-  position: relative;
-}
-
-.mob-soc::before {
-  position: absolute;
-  left: 0;
-  content: "";
-  width: 60px;
-  height: 1px;
-  background-color: #303030;
-  top: 9px;
-}
-
-.mob-soc__item:not(:last-child) {
-  margin-bottom: 24px;
-}
-
-.mob-soc__link {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: calc(19 / 14);
-  letter-spacing: 0.2em;
-  color: #303030;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  &:focus,
+  &:active,
+  &:hover {
+    color: var(--accent-color);
+  }
+  & > i {
+    transition: color var(--transition-duration) var(--transition-timing-function);
+  }
+  &:hover > i {
+    color: var(--accent-color);
+  }
 }
