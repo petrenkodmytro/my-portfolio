@@ -24,11 +24,8 @@
   background-size: cover;
   padding: 300px 10px 20px 10px;
   flex-grow: 1;
-  @include retina {
-    background-image: var(--gradient), url(../img/myphoto-bg.jpg);
-  }
   @include tablet {
-    padding: 470px 100px 20px 100px;
+    // padding: 470px 100px 20px 100px;
     background-image: var(--gradient), url(../img/myphoto-bg.jpg);
   }
 }

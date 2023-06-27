@@ -15,7 +15,7 @@
 .resume-title {
   color: var(--main-title-color);
   margin-bottom: 42px;
-  font-size: 40px;
+  font-size: 28px;
   
   @include tablet {
     font-size: 42px;
@@ -26,7 +26,7 @@
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.86;
-  letter-spacing: 0.02em;
+  // letter-spacing: 0.02em;
   text-indent: 20px;
   color: var(--main-title-color);
 }
@@ -100,7 +100,7 @@
 .resume-list-text {
   font-size: 18px;
   line-height: 1.67;
-  letter-spacing: 0.02em;
+  // letter-spacing: 0.02em;
   color: #9da4bd;
   &:last-child {
     order: 1;

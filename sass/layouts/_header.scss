@@ -1,21 +1,24 @@
 .header {
-  position: sticky;
-  top: 0px;
-  left: 0px;
+  // position: sticky;
+  // top: 0px;
+  // left: 0px;
+  position: fixed;
+  width: 100%;
+  background-color: black;
   z-index: 10; // щоб перекривало main
-  @include tablet {
-    background-color: black;
-  }
+ 
 }
 
 .header__container {
-  display: none;
-  justify-content: space-around;
+  // position: fixed;
+  // width: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
   // width: 100%;
   @include tablet {
-    display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -27,8 +30,12 @@
 }
 
 .navbar {
-  display: flex;
-  gap: 12px;
+  display: none;
+ 
+  @include tablet {
+    display: flex;
+    gap: 12px;
+  }
 }
 
 .nav-link {
@@ -72,12 +79,12 @@
 
 // ---mobile menu---
 .menu-open {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: var(--second-btn-color);
+  // position: absolute;
+  // top: 20px;
+  // right: 20px;
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
+  // border-radius: 5px;
   &:hover .icon_open {
     fill: var(--accent-color);
   }

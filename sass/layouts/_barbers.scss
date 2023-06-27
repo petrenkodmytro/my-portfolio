@@ -10,6 +10,11 @@
 .barbers-title {
   color: var(--second-title-color);
   margin-bottom: 44px;
+  font-size: 28px;
+  
+  @include tablet {
+    font-size: 42px;
+  }
 }
 
 .barbers-list {
