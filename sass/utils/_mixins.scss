@@ -1,8 +1,7 @@
-@mixin font($size, $height, $weight, $spacing) {
-  font-size: $size;
-  line-height: $height;
-  font-weight: $weight;
-  letter-spacing: $spacing;
+@mixin retina {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
 }
 
 @mixin mobile {
@@ -21,22 +20,4 @@
   @media screen and (min-width: 1200px) {
     @content;
   }
-}
-
-@mixin retina {
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    @content;
-  }
-}
-
-// @mixin media($size) {
-//   @media screen and (min-width: $size) {
-//     @content;
-//   }
-// }
-
-@mixin calc($count, $gap) {
-  width: calc((100% - $gap * ($count - 1)) / $count);
 }

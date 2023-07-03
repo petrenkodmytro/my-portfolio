@@ -1,0 +1,34 @@
+.work {
+  display: none;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.work-list {
+  display: flex;
+  gap: 30px;
+}
+
+.work-list__item {
+  position: relative;
+  width: calc((100% - 2 * 30px) / 3);
+}
+
+.work-list__text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--secondary-bg-color);
+  background: rgba(47, 48, 58, 0.8);
+}

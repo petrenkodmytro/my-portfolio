@@ -4,8 +4,11 @@
   line-height: 1.36;
   text-transform: uppercase;
   color: var(--accent-color);
-  @extend %list;
+
+  display: flex;
+  align-items: center;
   gap: 20px;
+
   &::before {
     content: "";
     width: 60px;
