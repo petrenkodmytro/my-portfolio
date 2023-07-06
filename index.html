@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -127,11 +128,24 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero__container container">
           <p class="pre-title hero__pre-title">introduction</p>
           <h1 class="hero__title" data-aos="fade-left">Dmytro Petrenko</h1>
           <p class="hero__after-title">Frontend Developer</p>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="container">
+          <p class="pre-title about__pre-title">a few words about me</p>
+          <h2 class="section-title about__title" data-aos="fade-left">About</h2>
+          <p class="about__after-title">"To get the desired result, you need to put a lot of effort."</p>
+          <p class="about__text">
+            Hi, everyone. My name is Dmytro. I'm from Kharkiv, Ukraine. In an era of rapidly developing digitalization of society, it is important to keep up with the times. That's why I decided to
+            become Frontend Developer. I try to staying updated with the latest industry trends and best practices, continuously enhancing skills and knowledge. A dedicated problem solver who thrives
+            in fast-paced environments and possesses excellent communication and interpersonal skills. Always seeking new challenges and opportunities to contribute to the success of projects as a
+            Frontend Developer.
+          </p>
         </div>
       </section>
       <section class="advantages">
@@ -177,197 +191,26 @@
           </ul>
         </div>
       </section>
-      <section class="work">
+      <section class="resume" id="resume">
         <div class="container">
-          <h2 class="work__title title">Чим ми займаємося</h2>
-          <ul class="work-list list">
-            <li class="work-list__item">
-              <img src="./images/devise.jpg" width="370" alt="на планшеті зображена палітра кольорів" />
-              <p class="work-list__text">десктопні додатки</p>
-            </li>
-            <li class="work-list__item">
-              <img src="./images/computer.jpg" width="370" alt="людина сидить за кюмп'ютером з телефоном у руках" />
-              <p class="work-list__text">мобільні додатки</p>
-            </li>
-            <li class="work-list__item">
-              <img src="./images/keyboard.jpg" width="370" alt="людина набирає на клавіатурі інформацію" />
-              <p class="work-list__text">дизайнерські рішення</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="team">
-        <div class="container">
-          <h2 class="team__title title">Наша команда</h2>
-          <ul class="people-list list">
-            <li class="people-list__item">
-              <picture>
-                <source srcset="./images/team/igor.jpg 1x, ./images/team/igor-2x.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./images/team/igor-tab.jpg 1x, ./images/team/igor-tab-2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/team/igor-mob.jpg 1x, ./images/team/igor-mob-2x.jpg 2x" media="(min-width: 320px)" />
-                <img src="./images/team/igor-mob.jpg" width="450" alt="жінка з білявим волоссям в окулярах" />
-              </picture>
-              <div class="people-list__content">
-                <h3 class="people-list__title">Ігор Дем'яненко</h3>
-                <p class="people-list__text" lang="en">Product Designer</p>
-                <ul class="social-list list">
-                  <li>
-                    <a class="social-list__link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="people-list__item">
-              <picture>
-                <source srcset="./images/team/olga.jpg 1x, ./images/team/olga-2x.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./images/team/olga-tab.jpg 1x, ./images/team/olga-tab-2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/team/olga-mob.jpg 1x, ./images/team/olga-mob-2x.jpg 2x" media="(min-width: 320px)" />
-                <img src="./images/team/olga-mob.jpg" width="450" alt="жінка з білявим волоссям в окулярах" />
-              </picture>
-              <div class="people-list__content">
-                <h3 class="people-list__title">Ольга Рєпіна</h3>
-                <p class="people-list__text" lang="en">Frontend Developer</p>
-                <ul class="social-list list">
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="people-list__item">
-              <picture>
-                <source srcset="./images/team/nikola.jpg 1x, ./images/team/nikola-2x.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./images/team/nikola-tab.jpg 1x, ./images/team/nikola-tab-2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/team/nikola-mob.jpg 1x, ./images/team/nikola-mob-2x.jpg 2x" media="(min-width: 320px)" />
-                <img src="./images/team/nikola-mob.jpg" width="450" alt="жінка з білявим волоссям в окулярах" />
-              </picture>
-              <div class="people-list__content">
-                <h3 class="people-list__title">Микола Тарасов</h3>
-                <p class="people-list__text" lang="en">Marketing</p>
-                <ul class="social-list list">
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="people-list__item">
-              <picture>
-                <source srcset="./images/team/misha.jpg 1x, ./images/team/misha-2x.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./images/team/misha-tab.jpg 1x, ./images/team/misha-tab-2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/team/misha-mob.jpg 1x, ./images/team/misha-mob-2x.jpg 2x" media="(min-width: 320px)" />
-                <img src="./images/team/misha-mob.jpg" width="450" alt="жінка з білявим волоссям в окулярах" />
-              </picture>
-              <div class="people-list__content">
-                <h3 class="people-list__title">Михайло Єрмаков</h3>
-                <p class="people-list__text" lang="en">UI Designer</p>
-                <ul class="social-list list">
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-list__link link" href="#">
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="./images/svg/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
+          <p class="resume-pre-title pre-title">my skills</p>
+          <h2 class="resume-title section-title" data-aos="fade-left">Resume</h2>
+          <p class="resume-after-title">
+            I am a Junior Fullstack Developer. I am studying at the FullStack Developer course at the Go IT company. During the period of training I created two team and five individual projects. I
+            have practical experience in creating websites. Mastered the skills HTML, CSS, SCSS, JavaScript, React.js. Continuing to study Node.js. I have the desire and ability for further study and
+            development. I know that the work of a developer is not easy, but I am ready to make every effort to develop my skills.
+          </p>
+          <p class="text-skill">Languages and Tools</p>
+          <ul class="list-skills list">
+            <li class="skill"><i class="skill-icon bx bxl-html5"></i></li>
+            <li class="skill"><i class="skill-icon bx bxl-css3"></i></li>
+            <li class="skill"><i class="skill-icon bx bxl-sass"></i></li>
+            <li class="skill"><i class="skill-icon bx bxl-javascript"></i></li>
+            <li class="skill"><i class="skill-icon bx bxl-react"></i></li>
+            <li class="skill"><i class="skill-icon bx bxl-nodejs"></i></li>
+            <li class="skill"><i class="skill-icon bx bxl-typescript"></i></li>
+            <li class="skill"><i class="skill-icon bx bxl-git"></i></li>
+            <li class="skill"><i class="skill-icon bx bxl-figma"></i></li>
           </ul>
         </div>
       </section>
@@ -479,6 +322,10 @@
         </form>
       </div>
     </div> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>

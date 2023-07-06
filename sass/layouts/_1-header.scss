@@ -1,0 +1,225 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color: var(--brand-bg-color);
+  border-bottom: 1px solid var(--icon);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+
+  @include tablet{
+    height: 60px;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-list {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--icon);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  font-size: 15px;
+  &:focus,
+  &:active,
+  &:hover {
+    color: var(--secondary-bg-color);
+  }
+  & > i {
+    transition: color var(--transition-duration) var(--transition-timing-function);
+  }
+  &:hover > i {
+    color: var(--accent-color);
+  }
+}
+
+
+// ---- MOBILE MENU ----
+.menu-open {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-open__icon,
+.menu-close__icon {
+  fill: var(--icon);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+
+  .menu-open:hover &,
+  .menu-open:focus &,
+  .menu-close:hover &,
+  .menu-close:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.mob-menu.is-hidden {
+  transform: translateX(-100%);
+}
+
+.mob-menu {
+  // width: 100vw;
+  height: 100vh;
+  background-color: #d5dae1;
+  top: 0;
+  position: fixed;
+  z-index: 999;
+  padding-top: 20px;
+  padding-bottom: 32px;
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 500ms ease;
+  & > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+  }
+}
+
+.menu-close {
+  margin-left: auto;
+  display: block;
+  background-color: transparent;
+  border: none;
+  &:hover .icon_close {
+    fill: var(--accent-color);
+  }
+}
+
+.icon_close {
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  fill: var(--second-title-color);
+}
+
+.sidebar__profile {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  border: 8px solid var(--brand-bg-color);
+  border-radius: 50%;
+}
+
+.sidebar__text-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align-last: center;
+}
+
+.contact__item {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.contact__link {
+  font-weight: 500;
+  line-height: 1.14;
+  color: var(--brand-color);
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+.contact__link:hover,
+.contact__link:focus {
+  color: var(--accent-color);
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  color: var(--second-title-color);
+}
+
+.contact__icon {
+  display: block;
+  margin-right: 10px;
+  fill: currentColor;
+
+  .contact__link:hover &,
+  .contact__link:focus & {
+    fill: currentColor;
+  }
+}
+
+.soc-list {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.soc-link {
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-bg-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // fill: var(--second-title-color);
+  transition: background-color var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--brand-bg-color);
+    fill: var(--accent-color);
+  }
+}
+
+.mob-menu-list__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.mob-menu-list__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  letter-spacing: 0.1em;
+  color: #303030;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  &:focus,
+  &:active,
+  &:hover {
+    color: var(--accent-color);
+  }
+  & > i {
+    margin-right: 4px;
+    transition: color var(--transition-duration) var(--transition-timing-function);
+  }
+  &:hover > i {
+    color: var(--accent-color);
+  }
+}
