@@ -3,15 +3,15 @@
   margin: 0 auto;
   padding: 0 20px;
   // mobile
-  @media screen and (min-width: 480px) {
+  @include mobile {
     max-width: 480px;
   }
   // tablet
-  @media screen and (min-width: 768px) {
+  @include tablet {
     max-width: 768px;
   }
   // desktop
-  @media screen and (min-width: 1200px) {
+  @include descktop {
     max-width: 1200px;
   }
 }
