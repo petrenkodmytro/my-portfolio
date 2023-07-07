@@ -1,12 +1,55 @@
-.title {
-  margin-bottom: 30px;
+.section-title {
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
-  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--brand-color);
+  margin-bottom: 20px;
+  @include mobile {
+    font-size: 40px;
+  }
+  @include desktop {
+    font-size: 72px;
+  }
+}
 
-  @media screen and (min-width: 1200px) {
-    font-size: 36px;
-    margin-bottom: 50px;
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: var(--accent-color);
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 18px;
+  }
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+  }
+}
+
+.after-title {
+  font-size: 18px;
+  line-height: 1.62;
+  color: var(--brand-bg-color);
+  @include tablet {
+    font-size: 24px;
+    line-height: 1.67;
+    max-width: 360px;
+  }
+  @include desktop {
+    font-size: 28px;
   }
 }
