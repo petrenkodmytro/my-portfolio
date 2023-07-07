@@ -926,6 +926,10 @@ button {
   margin-bottom: 20px;
 }
 
+.resume-title {
+  color: var(--secondary-bg-color);
+}
+
 .resume-after-title {
   margin-bottom: 20px;
   font-size: 16px;
