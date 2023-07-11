@@ -20,33 +20,12 @@
 }
 
 .hero__title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
   color: var(--secondary-bg-color);
   margin-bottom: 10px;
-  @include mobile {
-    font-size: 40px;
-  }
-  @include desktop {
-    font-size: 72px;
-  }
 }
 
 .hero__after-title {
-  font-size: 18px;
-  line-height: 1.62;
-  color: #f3f3f6;
-  @include tablet {
-    font-size: 24px;
-    line-height: 1.67;
-    max-width: 360px;
-  }
-  @include desktop {
-    font-size: 28px;
-  }
+  color: var(--secondary-bg-color);
 }
 
 .hero__btn {

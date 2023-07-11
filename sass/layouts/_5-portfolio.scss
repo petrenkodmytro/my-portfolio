@@ -1,0 +1,27 @@
+.portfolio {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.portfolio-container {
+ 
+  @include desktop {
+    
+  }
+}
+
+.portfolio-title {
+  // color: #303030;
+  margin-bottom: 20px;
+  // font-size: 28px;
+  
+  @include tablet {
+    font-size: 42px;
+  }
+}
+
+.portfolio-after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}

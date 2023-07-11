@@ -153,7 +153,7 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .section-title {
-    font-size: 72px;
+    font-size: 60px;
   }
 }
 
@@ -170,6 +170,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .pre-title {
@@ -197,7 +198,6 @@ button {
   .after-title {
     font-size: 24px;
     line-height: 1.67;
-    max-width: 360px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -750,41 +750,12 @@ button {
 }
 
 .hero__title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
   color: var(--secondary-bg-color);
   margin-bottom: 10px;
 }
-@media screen and (min-width: 480px) {
-  .hero__title {
-    font-size: 40px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero__title {
-    font-size: 72px;
-  }
-}
 
 .hero__after-title {
-  font-size: 18px;
-  line-height: 1.62;
-  color: #f3f3f6;
-}
-@media screen and (min-width: 768px) {
-  .hero__after-title {
-    font-size: 24px;
-    line-height: 1.67;
-    max-width: 360px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero__after-title {
-    font-size: 28px;
-  }
+  color: var(--secondary-bg-color);
 }
 
 .hero__btn {
@@ -798,19 +769,7 @@ button {
   padding-bottom: 50px;
 }
 
-.about__pre-title {
-  margin-bottom: 20px;
-}
-
-.about__title {
-  color: var(--brand-color);
-  margin-bottom: 20px;
-}
-
 .about__after-title {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
   font-style: italic;
   color: var(--secondary-color);
   margin-bottom: 20px;
@@ -820,94 +779,12 @@ button {
   font-size: 16px;
   line-height: 1.86;
   text-indent: 20px;
-  color: var(--secondary-color);
+  color: var(--brand-color);
 }
 @media screen and (min-width: 768px) {
   .about__text {
     font-size: 20px;
   }
-}
-
-.advantages {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.advantages-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 30px;
-}
-
-.advantages-list__item {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .advantages-list__item {
-    width: calc((100% - 60px) / 2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .advantages-list__item {
-    width: calc((100% - 90px) / 4);
-  }
-}
-
-.icon-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: var(--bg-color-icon-box);
-  border-radius: 4px;
-}
-
-.advantages-list__icon {
-  width: 70px;
-  height: 70px;
-}
-
-/* .advantages-list__item::before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-bottom: 30px;
-    background-image: url(../images/advantages-astronaut.svg);
-    background-size: 70 px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--bg-color-btn-filter);
-  } */
-.advantages-list__title {
-  text-align: center;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 768px) {
-  .advantages-list__title {
-    text-align: start;
-  }
-}
-
-.advantages-list__text {
-  line-height: 1.71;
-  color: var(--secondary-color);
 }
 
 .resume {
@@ -922,23 +799,44 @@ button {
   padding-bottom: 50px;
 }
 
-.resume-pre-title {
-  margin-bottom: 20px;
-}
-
 .resume-title {
   color: var(--secondary-bg-color);
 }
 
-.resume-after-title {
-  margin-bottom: 20px;
+.resume-text {
   font-size: 16px;
   line-height: 1.86;
   text-indent: 20px;
   color: var(--secondary-bg-color);
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .resume-text {
+    font-size: 20px;
+  }
+}
+
+.resume-after-title {
+  max-width: 300px;
+  text-align: center;
+  font-style: italic;
+  color: var(--secondary-bg-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.resume-after-title > a {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .resume-after-title {
+    max-width: 500px;
+    font-size: 20px;
+  }
 }
 
 .text-skill {
+  font-size: 18px;
   text-align: center;
   color: var(--secondary-bg-color);
 }
@@ -968,65 +866,29 @@ button {
   }
 }
 
-.clients {
-  padding: 60px 0;
-}
-@media screen and (min-width: 1200px) {
-  .clients {
-    padding: 94px 0;
-  }
+.portfolio {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.clients-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 30px;
-}
-
-.clients-list__item {
-  width: calc((100% - 60px) / 2);
+.portfolio-title {
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
-  .clients-list__item {
-    width: calc((100% - 90px) / 3);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .clients-list__item {
-    width: 170px;
+  .portfolio-title {
+    font-size: 42px;
   }
 }
 
-.clients-list__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  color: var(--icon);
-  -webkit-transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
-  transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
-}
-.clients-list__link:hover, .clients-list__link:focus {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+.portfolio-after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
 }
 
-.clients-list__icon {
-  fill: currentColor;
+.hobby {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .filter {
@@ -1241,6 +1103,16 @@ button {
         flex-wrap: nowrap;
     gap: 0px;
   }
+}
+
+.footer-copy {
+  text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+  font-style: italic;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  color: #9da4bd;
 }
 
 .contact-box {

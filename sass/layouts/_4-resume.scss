@@ -10,30 +10,40 @@
   padding-bottom: 50px;
 }
 
-.resume-pre-title {
-  margin-bottom: 20px;
-}
-
 .resume-title {
   color: var(--secondary-bg-color);
-  // margin-bottom: 42px;
-  // font-size: 28px;
-  
-  // @include tablet {
-  //   font-size: 42px;
-  // }
+}
+
+.resume-text {
+  font-size: 16px;
+  line-height: 1.86;
+  text-indent: 20px;
+  color: var(--secondary-bg-color);
+  margin-bottom: 20px;
+  @include tablet {
+    font-size: 20px;
+  }
 }
 
 .resume-after-title {
-  margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 1.86;
-  // letter-spacing: 0.02em;
-  text-indent: 20px;
+  max-width: 300px;
+  text-align: center;
+  font-style: italic;
   color: var(--secondary-bg-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  & > a {
+    color: var(--accent-color);
+  }
+  @include tablet {
+    max-width: 500px;
+    font-size: 20px;
+  }
 }
 
 .text-skill {
+  font-size: 18px;
   text-align: center;
   color: var(--secondary-bg-color);
 }
