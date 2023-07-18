@@ -305,9 +305,9 @@ button {
 }
 @media screen and (max-width: 1199px) {
   .modal {
-    height: 100%;
+    height: 85%;
     width: 95%;
-    max-height: 609px;
+    max-height: 600px;
     max-width: 450px;
     overflow: scroll;
   }
@@ -386,7 +386,7 @@ button {
 }
 
 .form__input.comment {
-  height: 120px;
+  height: 80px;
   padding: 12px 16px;
   resize: none;
 }
@@ -892,6 +892,18 @@ button {
   padding-bottom: 50px;
 }
 
+.hobby__text {
+  font-size: 16px;
+  line-height: 1.86;
+  text-indent: 20px;
+  color: var(--brand-color);
+}
+@media screen and (min-width: 768px) {
+  .hobby__text {
+    font-size: 20px;
+  }
+}
+
 .filter {
   padding: 60px 0;
 }
@@ -1015,7 +1027,15 @@ button {
 }
 
 .cads-content {
-  padding: 20px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 14px;
   border: var(--border-cads);
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1027,7 +1047,7 @@ button {
 }
 
 .cads-title {
-  margin-bottom: 4px;
+  display: block;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -1036,8 +1056,9 @@ button {
 }
 
 .cads-text {
+  display: block;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.1;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
 }
@@ -1068,9 +1089,10 @@ button {
 }
 
 .overley-text {
-  font-size: 18px;
+  text-indent: 20px;
+  font-size: 16px;
   line-height: 1.56;
-  color: var(--secondary-bg-color);
+  color: var(--brand-color);
 }
 
 .footer {
