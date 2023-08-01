@@ -997,9 +997,8 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -1135,12 +1134,6 @@ button {
   border: 1px solid var(--accent-color);
   border-radius: 25px;
 }
-@media screen and (min-width: 768px) {
-  .online-btn {
-    margin-left: 0;
-  }
-}
-
 .contacts {
   background-image: url(../img/contact/contact-bg-mobile-min.png);
   background-repeat: no-repeat;
@@ -1162,6 +1155,11 @@ button {
   color: var(--icon);
   display: inline-block;
   margin-bottom: 10px;
+  -webkit-transition: color var(--transition-duration) var(--transition-timing-function);
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+.contacts-map-link:hover, .contacts-map-link:focus, .contacts-map-link:active {
+  color: var(--accent-color);
 }
 
 .link-footer {

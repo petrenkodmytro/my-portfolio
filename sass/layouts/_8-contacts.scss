@@ -11,7 +11,7 @@
 
   @include desktop {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 
@@ -88,7 +88,7 @@
   border: 1px solid var(--accent-color);
     border-radius: 25px;
   @include tablet {
-    margin-left: 0;
+    // margin-left: 0;
   }
 }
 
@@ -125,7 +125,12 @@
   color: var(--icon);
   display: inline-block;
   margin-bottom: 10px;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  &:hover, &:focus, &:active{
+    color: var(--accent-color);
+  }
 }
+
 
 .link-footer {
   font-size: 18px;
