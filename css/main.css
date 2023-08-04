@@ -1162,13 +1162,6 @@ button {
   border: 1px solid var(--accent-color);
   border-radius: 25px;
 }
-.contacts {
-  background-image: url(../img/contact/contact-bg-mobile-min.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 .contacts-title {
   color: var(--secondary-bg-color);
   margin-bottom: 40px;
