@@ -11,19 +11,22 @@ formRef.addEventListener("input", _.throttle(onFormInput, 500));
 // console.log(formRef.elements);
 const FormData = {};
 // деструктуризація змінних email та password з об'єкта form.elements
-const { name, phone, message } = formRef.elements;
+const { name, phone, mail, message } = formRef.elements;
 // під час завантаження сторінки перевіряй стан сховища
 lastSaveForm();
 
 function onFormSubmit(event) {
   event.preventDefault();
   // проверка на пустые поля
-  if (name.value.trim() === "" || phone.value.trim() === "" || message.value.trim() === "") {
+  if (name.value.trim() === "" || phone.value.trim() === "" || mail.value.trim() === "" || message.value.trim() === "") {
     return Notiflix.Notify.warning("All fields must be filled in");
   }
 
   console.log(FormData);
 
+  // запуск спинера
+  Notiflix.Loading.arrows();
+  // отправка письма от клиентов
   emailjs
     .send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, FormData)
     .then((response) => {
@@ -31,16 +34,10 @@ function onFormSubmit(event) {
     })
     .catch((error) => {
       console.log("FAILED...", error);
+    })
+    .finally(() => {
+      Notiflix.Loading.remove();
     });
-
-  // emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, FormData).then(
-  //   function (response) {
-  //     console.log("SUCCESS!", response.status, response.text);
-  //   },
-  //   function (error) {
-  //     console.log("FAILED...", error);
-  //   }
-  // );
 
   // очищаем поля формы
   event.currentTarget.reset();
@@ -51,6 +48,7 @@ function onFormSubmit(event) {
 function onFormInput(event) {
   FormData[name.name] = name.value;
   FormData[phone.name] = phone.value;
+  FormData[mail.name] = mail.value;
   FormData[message.name] = message.value;
   // або
   // FormData[event.target.name] = event.target.value;
@@ -68,6 +66,7 @@ function lastSaveForm() {
   if (saveFormData) {
     name.value = saveFormData.name;
     phone.value = saveFormData.phone;
+    mail.value = saveFormData.mail;
     message.value = saveFormData.message;
   }
 }
