@@ -856,6 +856,10 @@ button {
 .resume-after-title > a {
   color: var(--accent-color);
 }
+.resume-after-title > a:hover,
+.resume-after-title a:focus {
+  color: var(--bg-color-btn);
+}
 @media screen and (min-width: 768px) {
   .resume-after-title {
     max-width: 500px;
