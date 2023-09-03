@@ -550,6 +550,7 @@ button {
   -webkit-transition: color var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function);
   font-size: 15px;
+  position: relative;
 }
 .nav-link:focus, .nav-link:active, .nav-link:hover {
   color: var(--secondary-bg-color);
@@ -560,6 +561,39 @@ button {
 }
 .nav-link:hover > i {
   color: var(--accent-color);
+}
+.nav-link:before, .nav-link:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--accent-color);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform var(--transition-duration) var(--transition-timing-function);
+  transition: -webkit-transform var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
+}
+.nav-link::after {
+  bottom: 100%;
+  left: 0;
+}
+.nav-link::before {
+  top: 100%;
+  right: 0;
+}
+.nav-link:hover::after {
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.nav-link:hover::before {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .menu-open {
